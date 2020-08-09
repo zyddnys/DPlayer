@@ -32,6 +32,7 @@ class DPlayer {
      * @constructor
      */
     constructor(options) {
+        console.log("NMSL");
         this.options = handleOption({ preload: options.video.type === 'webtorrent' ? 'none' : 'metadata', ...options });
 
         if (this.options.video.quality) {
