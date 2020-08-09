@@ -15,10 +15,8 @@ class Subtitle {
 
         if (this.video.textTracks && this.video.textTracks[0]) {
             const track = this.video.textTracks[0];
-            console.log('subtitle track triggered!');
 
             track.oncuechange = () => {
-                console.log('subtitle cue changed!');
                 const cue = track.activeCues[0];
                 this.container.innerHTML = '';
                 if (cue) {
