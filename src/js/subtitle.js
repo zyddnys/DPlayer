@@ -24,7 +24,7 @@ class Subtitle {
                     template.appendChild(cue.getCueAsHTML());
                     const trackHtml = template.innerHTML
                         .split(/\r?\n/)
-                        .map((item) => `<p style="background-color: rgba(0,0,0,0.5);">${item}</p>`)
+                        .map((item) => `<p><span style="background-color: rgba(0,0,0,0.3);">${item}</span></p>`)
                         .join('');
                     this.container.innerHTML = trackHtml;
                 }
