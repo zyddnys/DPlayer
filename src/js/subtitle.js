@@ -18,6 +18,7 @@ class Subtitle {
             console.log('subtitle track triggered!');
 
             track.oncuechange = () => {
+                console.log('subtitle cue changed!');
                 const cue = track.activeCues[0];
                 this.container.innerHTML = '';
                 if (cue) {
