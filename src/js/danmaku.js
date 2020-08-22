@@ -106,7 +106,7 @@ class Danmaku {
             text: this.htmlEncode(danmakuData.text),
             color: danmakuData.color,
             type: danmakuData.type,
-            border: `2px solid #000000`,
+            border: `2px solid ${this.options.borderColor}`,
         };
         this.draw(danmaku);
 
@@ -212,7 +212,8 @@ class Danmaku {
                 item.classList.add('dplayer-danmaku-item');
                 item.classList.add(`dplayer-danmaku-${dan[i].type}`);
                 if (dan[i].border) {
-                    item.innerHTML = `<span style="border:${dan[i].border}">${dan[i].text}</span>`;
+                    // item.innerHTML = `<span style="border:${dan[i].border}">${dan[i].text}</span>`;
+                    item.innerHTML = `<span style="font-weight: bold; border:3px solid black;">${dan[i].text}</span>`;
                 } else {
                     item.innerHTML = dan[i].text;
                 }
