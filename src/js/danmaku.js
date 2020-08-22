@@ -213,10 +213,10 @@ class Danmaku {
                 item.classList.add(`dplayer-danmaku-${dan[i].type}`);
                 if (dan[i].border) {
                     // item.innerHTML = `<span style="border:${dan[i].border}">${dan[i].text}</span>`;
-                    item.innerHTML = `<span style="-webkit-text-stroke-color: black; -webkit-text-stroke-width: 1.50px;; border:${dan[i].border}">${dan[i].text}</span>`;
+                    item.innerHTML = `<span style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; border:${dan[i].border}">${dan[i].text}</span>`;
                 } else {
                     // item.innerHTML = dan[i].text;
-                    item.innerHTML = `<span style="-webkit-text-stroke-color: black; -webkit-text-stroke-width: 1.50px;">${dan[i].text}</span>`;
+                    item.innerHTML = `<span style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">${dan[i].text}</span>`;
                 }
                 item.style.opacity = this._opacity;
                 item.style.color = utils.number2Color(dan[i].color);
