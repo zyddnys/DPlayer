@@ -215,7 +215,7 @@ class Danmaku {
                     // item.innerHTML = `<span style="border:${dan[i].border}">${dan[i].text}</span>`;
                     item.innerHTML = `<span style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; border:${dan[i].border}">${dan[i].text}</span>`;
                 } else {
-                    //item.innerHTML = dan[i].text;
+                    // item.innerHTML = dan[i].text;
                     item.innerHTML = `<span style="text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;">${dan[i].text}</span>`;
                 }
                 item.style.opacity = this._opacity;
