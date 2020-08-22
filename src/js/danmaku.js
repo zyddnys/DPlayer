@@ -106,7 +106,7 @@ class Danmaku {
             text: this.htmlEncode(danmakuData.text),
             color: danmakuData.color,
             type: danmakuData.type,
-            border: `2px solid ${this.options.borderColor}`,
+            border: `2px solid #000000`,
         };
         this.draw(danmaku);
 
@@ -307,13 +307,7 @@ class Danmaku {
     }
 
     htmlEncode(str) {
-        return str
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#x27;')
-            .replace(/\//g, '&#x2f;');
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;').replace(/\//g, '&#x2f;');
     }
 
     resize() {
