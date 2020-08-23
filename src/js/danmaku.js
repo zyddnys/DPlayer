@@ -219,7 +219,7 @@ class Danmaku {
                     item.innerHTML = `<span style="font-family: "Lucida Console", Courier, monospace; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">${dan[i].text}</span>`;
                 }
                 item.style.opacity = 100; // this._opacity;
-                item.style.color = utils.number2Color(dan[i].color); // utils.shadeColor(, -20);
+                item.style.color = utils.shadeColor(utils.number2Color(dan[i].color), -20);
                 item.style.fontSize = '1.5em';
                 item.addEventListener('animationend', () => {
                     this.container.removeChild(item);
