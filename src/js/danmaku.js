@@ -219,7 +219,7 @@ class Danmaku {
                     item.innerHTML = `<span style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">${dan[i].text}</span>`;
                 }
                 item.style.opacity = 100; // this._opacity;
-                item.style.color = utils.shadeColor(utils.number2Color(dan[i].color), -20);
+                item.style.color = utils.number2Color(dan[i].color); // utils.shadeColor(, -20);
                 item.addEventListener('animationend', () => {
                     this.container.removeChild(item);
                 });
