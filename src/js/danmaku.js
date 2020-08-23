@@ -220,7 +220,7 @@ class Danmaku {
                 }
                 item.style.opacity = 100; // this._opacity;
                 item.style.color = utils.shadeColor(utils.number2Color(dan[i].color), -20);
-                item.style.fontSize = '1.5em';
+                item.style.fontSize = '1em';
                 item.addEventListener('animationend', () => {
                     this.container.removeChild(item);
                 });
