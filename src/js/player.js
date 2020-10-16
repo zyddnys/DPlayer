@@ -403,14 +403,19 @@ class DPlayer {
                 // https://github.com/Dash-Industry-Forum/dash.js
                 case 'dash':
                     if (window.dashjs) {
-                        const dashjsPlayer = window.dashjs.MediaPlayer().create().initialize(video, video.src, false);
-                        const options = this.options.pluginOptions.dash;
-                        dashjsPlayer.updateSettings(options);
-                        this.plugins.dash = dashjsPlayer;
-                        this.events.on('destroy', () => {
-                            window.dashjs.MediaPlayer().reset();
-                            delete this.plugins.dash;
-                        });
+                        try {
+                            const dashjsPlayer = window.dashjs.MediaPlayer().create().initialize(video, video.src, false);
+                            const options = this.options.pluginOptions.dash;
+                            dashjsPlayer.updateSettings(options);
+                            this.plugins.dash = dashjsPlayer;
+                            this.events.on('destroy', () => {
+                                window.dashjs.MediaPlayer().reset();
+                                delete this.plugins.dash;
+                            });
+                        } catch (err) {
+                            console.error('Sorry, but we are working on fixing this issue.');
+                            console.error(err);
+                        }
                     } else {
                         this.notice("Error: Can't find dashjs.");
                     }
