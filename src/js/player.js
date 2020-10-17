@@ -404,7 +404,8 @@ class DPlayer {
                 case 'dash':
                     if (window.dashjs) {
                         try {
-                            const dashjsPlayer = window.dashjs.MediaPlayer().create().initialize(video, video.src, false);
+                            var dashjsPlayer = window.dashjs.MediaPlayer().create();
+                            dashjsPlayer.initialize(video, video.src, false);
                             const options = this.options.pluginOptions.dash;
                             dashjsPlayer.updateSettings(options);
                             this.plugins.dash = dashjsPlayer;
