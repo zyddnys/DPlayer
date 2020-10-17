@@ -410,7 +410,7 @@ class DPlayer {
                             dashjsPlayer.updateSettings(options);
                             this.plugins.dash = dashjsPlayer;
                             this.events.on('destroy', () => {
-                                window.dashjs.MediaPlayer().reset();
+                                dashjsPlayer.reset();
                                 delete this.plugins.dash;
                             });
                         } catch (err) {
