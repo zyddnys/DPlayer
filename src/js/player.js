@@ -409,10 +409,10 @@ class DPlayer {
                             const options = this.options.pluginOptions.dash;
                             dashjsPlayer.updateSettings(options);
                             this.plugins.dash = dashjsPlayer;
-                            this.events.on('destroy', () => {
-                                dashjsPlayer.reset();
-                                delete this.plugins.dash;
-                            });
+                            // this.events.on('destroy', () => {
+                            //     dashjsPlayer.reset();
+                            //     delete this.plugins.dash;
+                            // });
                         } catch (err) {
                             console.error('Sorry, but we are working on fixing this issue.');
                             console.error(err);
